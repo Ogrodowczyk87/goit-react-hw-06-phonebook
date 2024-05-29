@@ -29,4 +29,13 @@ export const store = configureStore({
       },
     }),
 });
+
+// redux-persist provides different storage to persist data like local 
+// storage, session storage or async storge. We will use the local storage.
+// We need the combineReducers function to group up all the reducers 
+// into one so that we can pass it to the redux-persist.redux-persist 
+// dispatches some functions and according to official redux-toolkit 
+// guide we need to add those to the ignore list to avoid unnecessary 
+// warnings or errors.
+
 export const persistor = persistStore(store);
